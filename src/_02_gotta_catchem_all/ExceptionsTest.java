@@ -1,9 +1,8 @@
 package _02_gotta_catchem_all;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
-
+import org.junit.Test;
 
 class ExceptionsTest {
 	ExceptionMethods em = new ExceptionMethods();
@@ -32,7 +31,14 @@ class ExceptionsTest {
 	//3. Complete the JUnit test method to test the divide method.
 	@Test
 	public void testDivideByZeroException() {
+		Double zero = 0.0;
 		
+		try {
+			assertEquals(em.divide(zero, zero), zero);
+			fail("IndexOutOfBoundsException not thrown");
+		}catch(IndexOutOfBoundsException e) {
+
+		}
 	}
 	
 	//4. In the ExceptionMethods class, write a method called reverseString that takes a
