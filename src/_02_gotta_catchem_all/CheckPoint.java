@@ -1,4 +1,4 @@
-// package _02_gotta_catchem_all;
+package _02_gotta_catchem_all;
 //
 // public class CheckPoint {
 // Questions and Exercises
@@ -25,8 +25,7 @@
 // Is there anything wrong with the following exception handler as written? Will
 // this code compile?
 
-// ANSWER: you lose information about the type of exception, it will compile
-// though.
+// ANSWER: you lose information about the type of exception, but it will compile
 
 // try {
 //
@@ -44,26 +43,32 @@
 // __compile error int[] A;
 // __no exception A program is reading a stream and reaches the end of stream
 // marker. A[0] = 0;
+
+
 // Exercises
+
 // Add a readList method to ListOfNumbers.java. This method should read in int
 // values from a file, print each value, and append them to the end of the
 // vector. You should catch all appropriate errors. You will also need a text
 // file containing numbers to read in.
-// Modify the following cat method so that it will compile.
-// public static void cat(File file) {
-// RandomAccessFile input = null;
-// String line = null;
-//
-// try {
-// input = new RandomAccessFile(file, "r");
-// while ((line = input.readLine()) != null) {
-// System.out.println(line);
-// }
-// return;
-// } finally {
-// if (input != null) {
-// input.close();
-// }
-// }
-// }
-// }
+
+// skipped
+
+ //Modify the following cat method so that it will compile.
+ public static void cat(File file) {
+ RandomAccessFile input = null;
+ String line = null;
+
+ try {
+ input = new RandomAccessFile(file, "r");
+ while ((line = input.readLine()) != null) {
+ System.out.println(line);
+ }
+ return;
+ } finally {
+ if (input != null) {
+ input.close();
+ }
+ }
+ }
+ }
